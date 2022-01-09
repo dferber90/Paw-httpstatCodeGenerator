@@ -8,7 +8,7 @@ addslashes = (str) ->
 addslashes_single_quotes = (str) ->
     ("#{str}").replace(/\\/g, '\\$&').replace(/'/g, "\\'")
 
-cURLCodeGenerator = ->
+httpstatCodeGenerator = ->
     self = this
 
     @headers = (request) ->
@@ -144,7 +144,7 @@ cURLCodeGenerator = ->
         else
             view.request.cURLDescription = ''
 
-        template = readFile "curl.mustache"
+        template = readFile "httpstat.mustache"
         rendered_code = Mustache.render template, view
         return @strip_last_backslash rendered_code
 
@@ -160,14 +160,14 @@ cURLCodeGenerator = ->
     return
 
 
-cURLCodeGenerator.identifier =
-    "com.luckymarmot.PawExtensions.cURLCodeGenerator"
-cURLCodeGenerator.title =
-    "cURL"
-cURLCodeGenerator.fileExtension = "sh"
-cURLCodeGenerator.languageHighlighter = "bash"
-cURLCodeGenerator.inputs = [
+httpstatCodeGenerator.identifier =
+    "de.dferber90.PawExtensions.httpstatCodeGenerator"
+httpstatCodeGenerator.title =
+    "httpstat"
+httpstatCodeGenerator.fileExtension = "sh"
+httpstatCodeGenerator.languageHighlighter = "bash"
+httpstatCodeGenerator.inputs = [
     new InputField("useHeader", "do not use -u option", "Checkbox", {defaultValue: false})
 ]
 
-registerCodeGenerator cURLCodeGenerator
+registerCodeGenerator httpstatCodeGenerator

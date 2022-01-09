@@ -1,5 +1,5 @@
 {
-  "name": "Paw-cURLCodeGenerator",
+  "name": "Paw-httpstatCodeGenerator",
   "version": "1.0.0",
   "devDependencies": {
     "coffee-script": "latest",
@@ -10,8 +10,11 @@
     "Base64": "^1.0.0",
     "mustache": "~0.8.2"
   },
+  "scripts": {
+    "cake": "cake"
+  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:luckymarmot/Paw-cURLCodeGenerator.git"
+    "url": "git@github.com:dferber90/Paw-httpstatCodeGenerator.git"
   }
 }

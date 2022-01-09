@@ -3,8 +3,8 @@
 mkdirp = require 'mkdirp'
 fs = require 'fs'
 
-file = 'cURLCodeGenerator.coffee'
-identifier = 'com.luckymarmot.PawExtensions.cURLCodeGenerator'
+file = 'httpstatCodeGenerator.coffee'
+identifier = 'de.dferber90.PawExtensions.httpstatCodeGenerator'
 
 extensions_dir = "#{ process.env.HOME }/Library/Containers/com.luckymarmot.Paw/Data/Library/Application Support/com.luckymarmot.Paw/Extensions/"
 build_root_dir = "build"
@@ -27,7 +27,7 @@ build_coffee = (callback) ->
 build_copy = () ->
     fs.writeFileSync "#{ build_dir }/README.md", fs.readFileSync("./README.md")
     fs.writeFileSync "#{ build_dir }/LICENSE", fs.readFileSync("./LICENSE")
-    fs.writeFileSync "#{ build_dir }/curl.mustache", fs.readFileSync("./curl.mustache")
+    fs.writeFileSync "#{ build_dir }/httpstat.mustache", fs.readFileSync("./httpstat.mustache")
     fs.writeFileSync "#{ build_dir }/mustache.js", fs.readFileSync("./node_modules/mustache/mustache.js")
     fs.writeFileSync "#{ build_dir }/Base64.js", fs.readFileSync("./node_modules/Base64/base64.js")
 

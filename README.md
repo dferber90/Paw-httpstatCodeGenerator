@@ -1,12 +1,12 @@
-[![Build Status](https://travis-ci.org/luckymarmot/Paw-cURLCodeGenerator.svg?branch=master)](https://travis-ci.org/luckymarmot/Paw-cURLCodeGenerator)
+[![Build Status](https://travis-ci.org/dferber90/Paw-httpstatCodeGenerator.svg?branch=master)](https://travis-ci.org/dferber90/Paw-httpstatCodeGenerator)
 
-# cURL Code Generator (Paw Extension)
+# httpstat Code Generator (Paw Extension)
 
-A [Paw Extension](http://luckymarmot.com/paw/extensions/) that generates [cURL](http://en.wikipedia.org/wiki/CURL) command line code.
+A [Paw Extension](https://paw.cloud/extensions/) that generates [httpstat](https://github.com/davecheney/httpstat) command line code.
 
 ## Installation
 
-Easily install this Paw Extension: [Install cURL Code Generator](http://luckymarmot.com/paw/extensions/cURLCodeGenerator)
+Easily install this Paw Extension: [Install httpstat Code Generator](https://paw.cloud/extensions/httpstatCodeGenerator)
 
 ## Development
 
@@ -14,8 +14,8 @@ Easily install this Paw Extension: [Install cURL Code Generator](http://luckymar
 
 ```shell
 npm install
-cake build
-cake install
+npm run cake build
+npm run cake install
 ```
 
 ### Watch
@@ -23,14 +23,13 @@ cake install
 During development, watch for changes:
 
 ```shell
-cake watch
+npm run cake watch
 ```
+
 
 ## License
 
 This Paw Extension is released under the [MIT License](LICENSE). Feel free to fork, and modify!
-
-Copyright © 2014 Paw Inc.
 
 ## Contributors
 
@@ -38,5 +37,10 @@ See [Contributors](https://github.com/luckymarmot/Paw-cURLCodeGenerator/graphs/c
 
 ## Credits
 
+This repo is a fork of [cURLCodeGenerator](https://github.com/luckymarmot/Paw-cURLCodeGenerator) with slight modifications to output `httpstat` instead of `curl` code.
+
+The other major difference is that `httpstat` requires the URL as the first argument while `curl` is more flexible. So this package will always emit the URL as the first argument, where as `cURLCodeGenerator` does not.
+
+* [cURLCodeGenerator](https://github.com/luckymarmot/Paw-cURLCodeGenerator), also released under the MIT License
 * [Mustache.js](https://github.com/janl/mustache.js/), also released under the MIT License
 * [URI.js](http://medialize.github.io/URI.js/), also released under the MIT License
