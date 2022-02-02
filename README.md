@@ -6,7 +6,7 @@ A [Paw Extension](https://paw.cloud/extensions/) that generates [httpstat](https
 
 ## Installation
 
-Easily install this Paw Extension: [Install httpstat Code Generator](https://paw.cloud/extensions/httpstatCodeGenerator)
+Easily install this Paw Extension: [Install httpstat Code Generator](https://paw.cloud/extensions/HttpStatCodeGenerator)
 
 ## Development
 
